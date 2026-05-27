@@ -1,4 +1,23 @@
+numpy
 pandas
-numpy 
+matplotlib
 seaborn
--e .        
+
+scikit-learn
+xgboost
+catboost
+
+flask
+dill
+pickle-mixin
+
+# utilities
+ipykernel
+
+# deployment
+gunicorn
+
+# logging & env
+python-dotenv
+
+#-e .   
