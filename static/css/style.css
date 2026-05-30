@@ -19,6 +19,10 @@
 }
 
 /* Global Styles */
+.text-muted {
+    color: var(--text-muted) !important;
+}
+
 body {
     background: var(--bg-gradient);
     font-family: var(--font-body);
