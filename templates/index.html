@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AURA.AI - Student Academic Performance Forecasting</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css" rel="stylesheet">
+    <!-- Custom Style Sheet -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+    <!-- Glowing Background Blobs -->
+    <div class="glow-node glow-primary"></div>
+    <div class="glow-node glow-secondary"></div>
+
+    <!-- Navigation Header -->
+    <nav class="navbar navbar-expand-lg custom-navbar py-3 sticky-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center gap-2" href="{{ url_for('index') }}">
+                <i class="bi bi-cpu-fill text-primary"></i>
+                <span class="brand-text">AURA.AI</span>
+            </a>
+            <button class="navbar-toggler border-0 text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <i class="bi bi-list fs-2"></i>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav align-items-center gap-3 mt-3 mt-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link text-white active" href="{{ url_for('index') }}">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white opacity-75 hover-opacity-100" href="{{ url_for('predict_datapoint') }}">Predictor</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="btn btn-premium py-2 px-3 fs-7" href="{{ url_for('predict_datapoint') }}">
+                            <i class="bi bi-lightning-charge-fill"></i> Analyze Now
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Showcase Section -->
+    <main class="container my-auto py-5 fade-in-up">
+        <div class="row align-items-center g-5">
+            
+            <!-- Left Side: Hero Text & Call to Action -->
+            <div class="col-lg-7 text-center text-lg-start">
+                <div class="badge bg-primary bg-opacity-10 text-primary border border-primary border-opacity-10 px-3 py-2 rounded-pill mb-3">
+                    <i class="bi bi-award-fill"></i> Next-Gen Student Analytics
+                </div>
+                <h1 class="hero-title mb-4">Forecasting Academic Success with AI</h1>
+                <p class="hero-subtitle mb-5 mx-auto mx-lg-0">
+                    AURA.AI utilizes advanced ensemble regressors (CatBoost, XGBoost, and Random Forest) to forecast high-precision mathematical aptitude scores based on custom socio-demographic indicators.
+                </p>
+                <div class="d-flex flex-column flex-sm-row gap-3 justify-content-center justify-content-lg-start">
+                    <a href="{{ url_for('predict_datapoint') }}" class="btn btn-premium btn-lg px-4 py-3">
+                        <i class="bi bi-rocket-takeoff-fill"></i> Launch Prediction Engine
+                    </a>
+                    <a href="https://github.com" target="_blank" class="btn btn-outline-premium btn-lg px-4 py-3">
+                        <i class="bi bi-github"></i> View Documentation
+                    </a>
+                </div>
+            </div>
+
+            <!-- Right Side: Model Architecture Card -->
+            <div class="col-lg-5">
+                <div class="glass-card">
+                    <h3 class="h5 fw-bold mb-4 d-flex align-items-center gap-2">
+                        <i class="bi bi-braces-asterisk text-primary"></i> Multi-Model Pipeline
+                    </h3>
+                    
+                    <div class="d-flex flex-column gap-3">
+                        
+                        <!-- Block 1 -->
+                        <div class="d-flex align-items-start gap-3 p-3 rounded-3 bg-white bg-opacity-5">
+                            <div class="bg-primary bg-opacity-10 p-2 rounded-3 text-primary">
+                                <i class="bi bi-database-fill-check fs-5"></i>
+                            </div>
+                            <div>
+                                <h4 class="h6 mb-1 fw-bold">Data Transformation System</h4>
+                                <p class="small text-muted mb-0">Imputation, Standard Scaling & One-Hot Encoding preprocess pipeline.</p>
+                            </div>
+                        </div>
+
+                        <!-- Block 2 -->
+                        <div class="d-flex align-items-start gap-3 p-3 rounded-3 bg-white bg-opacity-5">
+                            <div class="bg-secondary bg-opacity-10 p-2 rounded-3 text-secondary">
+                                <i class="bi bi-sliders2-vertical fs-5"></i>
+                            </div>
+                            <div>
+                                <h4 class="h6 mb-1 fw-bold">GridSearchCV Hyperparameter Tuning</h4>
+                                <p class="small text-muted mb-0">Calculates parameters dynamically to match target variables with optimal r2-scores.</p>
+                            </div>
+                        </div>
+
+                        <!-- Block 3 -->
+                        <div class="d-flex align-items-start gap-3 p-3 rounded-3 bg-white bg-opacity-5">
+                            <div class="bg-success bg-opacity-10 p-2 rounded-3 text-success">
+                                <i class="bi bi-shield-fill-check fs-5"></i>
+                            </div>
+                            <div>
+                                <h4 class="h6 mb-1 fw-bold">Predictive Ensemble Regressor</h4>
+                                <p class="small text-muted mb-0">Ensembles performance criteria across multiple decision trees to yield reliable metrics.</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-4 text-center">
+        <div class="container">
+            <p class="mb-1 small">AURA.AI System Suite &copy; 2026. All Rights Reserved.</p>
+            <div class="d-flex justify-content-center gap-3 small">
+                <a href="#">Privacy Policy</a>
+                <span class="text-white opacity-25">|</span>
+                <a href="#">Documentation</a>
+                <span class="text-white opacity-25">|</span>
+                <a href="#">API Integrations</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
