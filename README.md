@@ -6,7 +6,7 @@ The frontend features a state-of-the-art **glassmorphic dark-mode dashboard** bu
 
 ---
 
-## 🌟 Key Features
+##  Key Features
 
 * **Multi-Model Regression Ensemble**: Trains and evaluates multiple regressors (Random Forest, Decision Tree, Gradient Boosting, XGBoost, CatBoost, AdaBoost, Linear Regression) using `GridSearchCV` hyperparameter tuning to select the optimal model.
 * **Automated Transformation Pipeline**: Employs a robust preprocessing setup featuring `SimpleImputer` for handling missing data, `StandardScaler` for numeric scaling, and `OneHotEncoder` for categoricals.
@@ -16,7 +16,7 @@ The frontend features a state-of-the-art **glassmorphic dark-mode dashboard** bu
 
 ---
 
-## 📂 Project Structure
+##  Project Structure
 
 ```bash
 ├── artifacts/               # Packaged splits and pickled preprocessing/model assets
@@ -50,7 +50,7 @@ The frontend features a state-of-the-art **glassmorphic dark-mode dashboard** bu
 
 ---
 
-## 🛠️ Technology Stack
+##  Technology Stack
 
 | Layer | Technologies |
 | :--- | :--- |
@@ -60,7 +60,7 @@ The frontend features a state-of-the-art **glassmorphic dark-mode dashboard** bu
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
 Follow these steps to set up and run AURA.AI locally.
 
@@ -108,6 +108,6 @@ http://127.0.0.1:5000/
 
 ---
 
-## 🛡️ License & Attribution
+## License & Attribution
 * Designed, developed, and deployed by **Ankit** (itz.ankitbind01@gmail.com).
 * Built as a comprehensive end-to-end machine learning study and integration case.
